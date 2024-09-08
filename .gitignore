@@ -1,0 +1,5 @@
+/client/node_modules
+/express/node_modules
+/solidity/node_modules
+
+*.env*
