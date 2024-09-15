@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">Home</a>
+        <a href="vote.html">Vote</a>
+        <a href="candidates.html">Candidates</a>
+        <a href="results.html">Results</a>
+        <a href="profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="about.html">About</a>
+        <a href="help.html">Help/FAQ</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header>
+            <h1>Voting System</h1>
+        </header>
+
+        <main>
+            <h2>Voting Results</h2>
+            <p>Real-time results will be displayed here once voting is completed.</p>
+            <section id="voting-bank">
+                <h2>Voting Bank</h2>
+                <p>Track and manage your voting credits and activities.</p>
+                <div class="bank-details">
+                    <p><strong>Total Voting Credits:</strong> <span id="total-credits">0</span></p>
+                    <p><strong>Votes Cast:</strong> <span id="votes-cast">0</span></p>
+                </div>
+                <button id="view-credits-button">View Details</button>
+            </section>
+        </main>
+        
+
+        <!-- Footer -->
+        <footer>
+            <p>Voting System © 2024</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

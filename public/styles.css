@@ -1,0 +1,569 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+}
+.navbar-menu li {
+    margin: 0 10px;
+}
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+.navbar-logo {
+    font-size: 1.5em;
+}
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #222;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.card-view {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+}
+
+.vote-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.vote-btn:hover {
+    background-color: #218838;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/* Responsive Layout for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100px;
+    }
+    .main-content {
+        margin-left: 100px;
+    }
+    .card-view {
+        flex-direction: column;
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    background-color: #333;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    position: fixed;
+    width: calc(100% - 220px);
+    bottom: 0;
+    left: 220px;
+}
+/* Profile Page Styles */
+#profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profile-form h2 {
+    margin-top: 0;
+}
+
+#profile-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+#profile-form input[type="text"],
+#profile-form input[type="date"],
+#profile-form input[type="email"],
+#profile-form input[type="tel"],
+#profile-form input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#profile-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#profile-form button:hover {
+    background-color: #45a049;
+}
+
+#verify-btn {
+    background-color: #2196F3;
+}
+
+#verify-btn:hover {
+    background-color: #0b79d0;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form h2 {
+    margin-top: 0;
+}
+
+#contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+#contact-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+#profile-form h2,
+#contact-form h2 {
+    margin-top: 0;
+}
+
+#profile-form label,
+#contact-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+#profile-form input[type="text"],
+#profile-form input[type="date"],
+#profile-form input[type="email"],
+#profile-form input[type="tel"],
+#profile-form input[type="password"],
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#profile-form button,
+#contact-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#profile-form button:hover,
+#contact-form button:hover {
+    background-color: #45a049;
+}
+
+#verify-btn {
+    background-color: #2196F3;
+}
+
+#verify-btn:hover {
+    background-color: #0b79d0;
+}
+
+#contact-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+/* Vote Button and Counter Styles */
+#vote-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#vote-button:hover {
+    background-color: #45a049;
+}
+
+#vote-count {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+/* Profile Page Styles */
+#profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#photo-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the circle */
+    border: 2px solid #4CAF50; /* Optional: border color */
+}
+
+#profile-photo {
+    display: block;
+    margin: 10px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+#profile-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#photo-preview {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensures the image covers the circle */
+    border: 2px solid #4CAF50; /* Optional: border color */
+}
+
+#profile-photo {
+    display: block;
+    margin: 10px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Form Elements */
+#profile-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+#profile-form input[type="text"],
+#profile-form input[type="date"],
+#profile-form input[type="email"],
+#profile-form input[type="tel"],
+#profile-form input[type="password"],
+#profile-form input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#profile-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#profile-form button:hover {
+    background-color: #45a049;
+}
+/* Home Page Styles */
+#voting-bank {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#voting-bank h2 {
+    margin-bottom: 15px;
+}
+
+#voting-bank .bank-details {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#view-credits-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#view-credits-button:hover {
+    background-color: #45a049;
+}
+#main-content {
+    padding: 20px;
+}
+
+#about-us h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+#about-us p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#about-us ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#about-us ul li {
+    margin-bottom: 10px;
+}
+
+#about-us a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+#about-us a:hover {
+    text-decoration: underline;
+}
+#privacy-policy {
+    padding: 20px;
+}
+
+#privacy-policy h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    
+}
+
+#privacy-policy p {
+    font-size: 16px;
+    line-height: 1.6;
+    
+}
+
+#privacy-policy ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#privacy-policy ul li {
+    margin-bottom: 10px;
+    
+}
+
+#privacy-policy a {
+    color: #4CAF50;
+    text-decoration: none;
+    color: #ccc;
+}
+
+#privacy-policy a:hover {
+    text-decoration: underline;
+}
+
