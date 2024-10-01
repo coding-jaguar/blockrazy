@@ -9,11 +9,12 @@ contract VotingSystem {
         uint voteCount;
     }
 
-    // Struct to hold voter details
+    // Struct to hold voter details, including public key for verification
     struct Voter {
         bool isRegistered;
         bool hasVoted;
         uint vote;
+        string publicKey; // Added public key for voter authentication
     }
 
     address public admin;
@@ -65,10 +66,14 @@ contract VotingSystem {
     }
 
     // Function to register a voter (only by admin)
-    function registerVoter(address _voter) public onlyAdmin {
+    function registerVoter(
+        address _voter,
+        string memory _publicKey
+    ) public onlyAdmin {
         require(!voters[_voter].isRegistered, "Voter is already registered.");
         voters[_voter].isRegistered = true;
         voters[_voter].hasVoted = false;
+        voters[_voter].publicKey = _publicKey; // Store the public key for the voter
     }
 
     // Function to start voting (only by admin)
@@ -127,5 +132,15 @@ contract VotingSystem {
         }
 
         winnerName = candidates[winningCandidateId].name;
+    }
+
+    // Function to verify a voter's public key
+    function verifyVoter(
+        address _voter,
+        string memory _publicKey
+    ) public view returns (bool) {
+        require(voters[_voter].isRegistered, "Voter is not registered.");
+        return (keccak256(abi.encodePacked(voters[_voter].publicKey)) ==
+            keccak256(abi.encodePacked(_publicKey)));
     }
 }
