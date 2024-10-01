@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Sidebar -->
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="vote.html">Vote</a>
@@ -20,13 +18,10 @@
         <a href="help.html">Help/FAQ</a>
         <a href="contact.html">Contact Us</a>
     </div>
-
-    <!-- Main Content Area -->
     <div class="main-content">
         <header>
             <h1>Profile</h1>
         </header>
-
         <main>
             <h2>Profile Information</h2>
             <form id="profile-form">
@@ -35,33 +30,23 @@
                 <div id="photo-preview">
                     <img id="profile-image" src="default-profile.png" alt="Profile Photo">
                 </div>
-                
-                <!-- Other profile fields -->
                 <label for="dob">Date of Birth:</label>
                 <input type="date" id="dob" name="dob" required>
-                
                 <label for="place-of-birth">Place of Birth:</label>
                 <input type="text" id="place-of-birth" name="place-of-birth" required>
-                
                 <label for="email">Email ID:</label>
                 <input type="email" id="email" name="email" required>
-                
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
-                
                 <label for="otp">OTP:</label>
                 <input type="text" id="otp" name="otp" required>
-                
                 <button type="submit">Save</button>
             </form>
-        </main>
-
-        <!-- Footer -->
+        </main>   
         <footer>
             <p>Voting System © 2024</p>
         </footer>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

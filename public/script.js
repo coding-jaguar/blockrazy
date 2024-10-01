@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalText = document.getElementById('modal-text');
     const closeModal = document.querySelector('.close');
     let selectedCandidate = null;
-
     voteButtons.forEach(button => {
         button.addEventListener('click', function() {
             selectedCandidate = this.dataset.candidate;
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
     });
-
     document.getElementById('confirm-vote').addEventListener('click', function() {
         if (selectedCandidate) {
             alert(`You voted for Candidate ${selectedCandidate}!`);
@@ -24,10 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
            
         }
     });
-
 document.addEventListener('DOMContentLoaded', function() {
     const voteButtons = document.querySelectorAll('.vote-btn');
-
     voteButtons.forEach(button => {
         button.addEventListener('click', function() {
             const candidate = this.dataset.candidate;
@@ -55,40 +51,26 @@ document.getElementById('searchBar').addEventListener('input', function() {
         }
     });
 });
-// script.js
-
 document.getElementById('view-credits-button').addEventListener('click', function() {
     alert('Here you can manage and view your voting credits and activities.');
 });
-
-
 document.getElementById('profile-photo').addEventListener('change', function(event) {
     const file = event.target.files[0];
     const reader = new FileReader();
-    
     reader.onload = function(e) {
         const img = document.getElementById('profile-image');
         img.src = e.target.result;
     }
-    
     if (file) {
         reader.readAsDataURL(file);
     }
 });
-
-
 function incrementVoteCounter() {
     const counterElement = document.getElementById('vote-counter');
     let count = parseInt(counterElement.textContent, 10);
     counterElement.textContent = count + 1;
 }
-
 document.getElementById('vote-button').addEventListener('click', incrementVoteCounter);
-
-
-
-   
- 
     window.onclick = function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
