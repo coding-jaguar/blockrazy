@@ -1,12 +1,16 @@
 {
-  "name": "blockrazy",
+  "name": "blockchain-voting",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "interact.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ethers": "^5.7.2"
+  }
 }

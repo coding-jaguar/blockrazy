@@ -204,7 +204,7 @@ contract Voting {
 
         return (voterAddresses, hasVoted, isValidated, votedCandidates);
     }
-    function selfDestruct() public onlyOwner {
-        selfdestruct(payable(owner));
-    }
+    // function selfDestruct() public onlyOwner {
+    //     selfdestruct(payable(owner));
+    // }
 }

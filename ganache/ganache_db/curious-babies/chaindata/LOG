@@ -1,0 +1,11 @@
+2024/10/02-13:00:01.318 2fac Recovering log #66
+2024/10/02-13:00:01.318 2fac Level-0 table #69: started
+2024/10/02-13:00:01.320 2fac Level-0 table #69: 6806 bytes OK
+2024/10/02-13:00:01.324 2fac Delete type=0 #66
+2024/10/02-13:00:01.324 2fac Delete type=3 #64
+2024/10/02-13:00:01.752 2964 Compacting 1@0 + 1@1 files
+2024/10/02-13:00:01.761 2964 Generated table #71@0: 2186 keys, 658159 bytes
+2024/10/02-13:00:01.761 2964 Compacted 1@0 + 1@1 files => 658159 bytes
+2024/10/02-13:00:01.762 2964 compacted to: files[ 0 1 0 0 0 0 0 ]
+2024/10/02-13:00:01.762 2964 Delete type=2 #67
+2024/10/02-13:00:01.762 2964 Delete type=2 #69

@@ -1,0 +1,14 @@
+{
+  "name": "ganache",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ganache": "ganache-cli --port 7545 --networkId 1337 -m  \"arrange lift proud annual bag excess dawn park foil lion grant open\" --db ./ganache_db/chaindata"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ganache-cli": "^6.12.2"
+  }
+}
