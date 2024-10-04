@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import ElectionList from "./components/ElectionsList";
 import ElectionDetails from "./components/ElectionDetails";
-import jwtDecode from "jwt-decode";
 
 const ManageElections = () => {
   const [elections, setElections] = useState([]);

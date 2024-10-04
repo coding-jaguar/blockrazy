@@ -60,7 +60,7 @@ export const EthereumProvider: React.FC<{ children: React.ReactNode }> = ({
     if (typeof window.ethereum !== "undefined") {
       try {
         const web3Provider = new ethers.providers.Web3Provider(window.ethereum);
-        const network = await web3Provider.getNetwork();
+        // const network = await web3Provider.getNetwork();
 
         const accounts = await web3Provider.send("eth_requestAccounts", []);
         const signer = web3Provider.getSigner();

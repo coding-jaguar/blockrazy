@@ -58,7 +58,7 @@ const ManageUsers = () => {
 const Component = (users: any) => {
   return (
     <ul className="p-6 shadow-lg rounded-lg space-y-4 m-10 text-white">
-      {users.map((user) => (
+      {users.map((user: any) => (
         <li
           key={user.id}
           className="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow duration-300"

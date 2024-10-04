@@ -30,16 +30,16 @@ const ElectionDetails = () => {
   const location = useLocation();
   const [election, setElection] = useState<Election | null>(null);
 
-  const handleAddCandidate = async () => {
-    try {
-      const response = await axios.get(
-        import.meta.env.VITE_BASE_URL + "candidates"
-      );
-      console.log(response.data);
-    } catch (error) {
-      console.error("Error adding candidate:", error);
-    }
-  };
+  // const handleAddCandidate = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       import.meta.env.VITE_BASE_URL + "candidates"
+  //     );
+  //     console.log(response.data);
+  //   } catch (error) {
+  //     console.error("Error adding candidate:", error);
+  //   }
+  // };
 
   useEffect(() => {
     const getElection = async () => {

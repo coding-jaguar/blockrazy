@@ -1,0 +1,41 @@
+version: '3'
+services:
+  app:
+    build: ./client
+    ports:
+      - "3000:80"
+
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    depends_on:
+      - mongodb
+      - ganache
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - mongodb_data:/data/db
+
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "7545:7545"
+    command: ganache-cli --host 0.0.0.0 --port 7545 --accounts 10 --defaultBalanceEther 100 -m "arrange lift proud annual bag excess dawn park foil lion grant open"
+    volumes:
+      - ganache_data:/data  # Persist blockchain data
+
+volumes:
+  mongodb_data:
+  ganache_data:  

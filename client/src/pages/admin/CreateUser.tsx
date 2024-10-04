@@ -14,13 +14,13 @@ interface User {
 }
 
 interface CreateUserProps {
-  username: string | undefined;
-  password: string | undefined;
-  publicKey: string | undefined;
-  userType: UserType | undefined;
-  phoneNumber: string | undefined;
-  update: boolean;
-  id: string | undefined;
+  username?: string | undefined;
+  password?: string | undefined;
+  publicKey?: string | undefined;
+  userType?: UserType | undefined;
+  phoneNumber?: string | undefined;
+  update?: boolean;
+  id?: string | undefined;
 }
 
 const CreateUser: React.FC<CreateUserProps> = ({
