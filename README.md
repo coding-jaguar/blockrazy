@@ -12,8 +12,8 @@ This project consists of a client built with React, an Express.js backend, a Mon
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
-cd <repository-folder>
+git clone https://github.com/coding-jaguar/blockrazy.git
+cd blockrazy
 ```
 
 ### 2. Build and Start Services
